@@ -9,8 +9,8 @@
         <div class="row">
             <div >
                 <h1 class="text-uppercase">
-                    <p class="colortitulo">OBTEN LOS DATOS DE TU COCHE.</p>
-                    <p>EN UN ABRIR Y CERRAR DE OJOS.</p>
+                    <p class="colortitulo" id="fuente">OBTEN LOS DATOS DE TU COCHE.</p>
+                    <p id="fuente">EN UN ABRIR Y CERRAR DE OJOS.</p>
                 </h1>
 
             </div>
@@ -74,7 +74,7 @@
                 <h3 class="text-center">Quiénes somos</h3>
                 <p class="">Somos una pequeña empresa del ámbito automovilistico, que analizamos a tiempo real(a través de 4G) los datos de un coche.Mediante un <a href="https://es.wikipedia.org/wiki/OBD">OBD-II </a> almacenamos los datos en la <a href="https://es.wikipedia.org/wiki/Computaci%C3%B3n_en_la_nube" >nube</a>, y luego los plasmamos en ésta aplicación web. Es un servicio rápido, fiable y sobre todo sencillo de usar. Ofrecemos la opción de añadir más de un vehiculo a la aplicación. </p>
                 <hr class="my-4">
-
+                <img src="images/Race-tic_Intento1.png" width="500px" height="400px" id="imagen">
                 <!--<p class="text-center">Si lo prefieres, puedes seguir este <strong>videotutorial</strong> dónde se explica perfectamente cómo usarlo</p>-->
 
                 <!--<iframe class="video parallax" width="420" height="315"

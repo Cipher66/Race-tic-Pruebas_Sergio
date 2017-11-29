@@ -8,8 +8,6 @@
     background-color: #333;
 }
 
-
-
 li {
     float: left;
 }
@@ -21,7 +19,8 @@ li {
     color: #f05f40;
 }
 #navbar{
-    background-color: #222222;
+    /*background-color: #222222;*/
+    background-color: #0C1A1E;
 }
 
 .colorlogres{
@@ -56,12 +55,18 @@ header.masthead {
 }
 
 .colordesc{
-    background-color: #222222;
-    color:#f05f40;
+
+    background-color: #0C1A1E;
+    color: #9D9D9D;
+    /*background-color: #222222;*/
+    /*color: #333333;*/
+    /*color:#f05f40;*/
+    /*color: #54697E;*/
 }
 
 .colordesc:hover{
-    color:red;
+    /*color:red;*/
+    color: #F05F40;
 }
 
 .imgmitad{
@@ -181,14 +186,31 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
     float:left;
 }
 .linked-in{
-    background-color:#007bb6;
+    //background-color:#007bb6;
+    background-color: black;
 }
 .facebook{
-    background-color:#3b5998;
+    //background-color:#3b5998;
+    background-color: black;
 }
 .twitter{
-    background-color:#1da1f2;
+    //background-color:#1da1f2;
+    background-color: black;
 }
 .google{
-    background-color:#f63e28;
+    //background-color:#f63e28;
+    background-color: black;
+}
+
+/***********<-- CSS Sergio -->***********/
+
+#imagen{
+    display: block;
+    margin: 0px auto;
+}
+#fuente{
+    font-family: 'Montserrat', sans-serif;
+}
+#iconos:hover{
+    color: #F05F40;
 }

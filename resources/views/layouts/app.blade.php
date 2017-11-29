@@ -26,7 +26,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-
+    <!-- Google Fonts (Montserrat)-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- /Google Fonts (Montserrat)-->
     <link href="css/estiloshome.css" rel="stylesheet">
 
 
@@ -167,9 +169,9 @@
             <div class="col-md-3 col-sm-6 footer-col">
                 <h6 class="heading7">Mantente informado</h6>
                 <ul class="footer-social">
-                    <li><a href="https://es.linkedin.com/"><i class="fa fa-linkedin social-icon linked-in" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.facebook.com"><i class="fa fa-facebook social-icon facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.twitter.com"><i class="fa fa-twitter social-icon twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://es.linkedin.com/"><i class="fa fa-linkedin social-icon linked-in" aria-hidden="true" id="iconos"></i></a></li>
+                    <li><a href="https://www.facebook.com"><i class="fa fa-facebook social-icon facebook" aria-hidden="true" id="iconos"></i></a></li>
+                    <li><a href="https://www.twitter.com"><i class="fa fa-twitter social-icon twitter" aria-hidden="true" id="iconos"></i></a></li>
 
                 </ul>
             </div>
