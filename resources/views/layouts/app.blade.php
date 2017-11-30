@@ -141,7 +141,7 @@
     </div>
 </nav>
 
-@yield('content');
+@yield('content')
 
 <!--footer start from here-->
 <footer>

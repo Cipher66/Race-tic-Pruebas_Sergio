@@ -39,3 +39,9 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 
+/* <-- Rutas de Sergio --> */
+Route::get('/adminVer', function (){
+    $usuarios = DB::table('users')->get();
+    return view('admin', ['usuarios' => $usuarios]);
+
+});

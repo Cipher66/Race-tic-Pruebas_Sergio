@@ -214,3 +214,16 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
 #iconos:hover{
     color: #F05F40;
 }
+#boton{
+    background-color: #F44336; /* Rojo */
+    border: none;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#tabla{
+
+}
