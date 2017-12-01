@@ -15,7 +15,7 @@
                 <tr>
                     <td>{{ $data->name }}</td>
                     <td>{{ $data->email }}</td>
-                    <td><a href="adminEliminarUsuarios/{{ $data -> id }}" class="btn-danger">Eliminar</a></td>
+                    <td><a href="adminEliminarUsuarios/{{ $data -> id }}" class="miBoton">Eliminar</a></td>
                 </tr>
 
         @endforeach
