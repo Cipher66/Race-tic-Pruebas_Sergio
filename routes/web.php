@@ -40,8 +40,13 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 
 /* <-- Rutas de Sergio --> */
-Route::get('/adminVer', function (){
+Route::get('/adminVerUsuarios', function (){
     $usuarios = DB::table('users')->get();
     return view('admin', ['usuarios' => $usuarios]);
 
+});
+
+Route::get('/adminEliminarUsuarios/{id}', function ($id){
+    $borrar = DB::table('users')->where('id', '=', $id)->delete();
+    return redirect('/adminVerUsuarios');
 });
