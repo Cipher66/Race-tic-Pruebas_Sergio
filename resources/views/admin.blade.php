@@ -21,7 +21,15 @@
                     <td><a href="" class="botonEditar">Editar</a></td>
                     <td></td>
                 </tr>
-
+        <div class="">
+            <form>
+                <strong>Nombre:</strong><br>
+                <input type="text" value="{{ $data->name }}">
+                <strong>Email:</strong>
+                <input type="text" value="{{ $data->email }}">
+                <input type="submit" value="Actualizar perfil">
+            </form>
+        </div>
         @endforeach
     </table>
     </center>
