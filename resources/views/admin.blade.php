@@ -10,12 +10,16 @@
             <th>Nombre</th>
             <th>Correo electrónico</th>
             <th>Eliminar</th>
+            <th>Editar</th>
+            <th>Confirmado</th>
         </tr>
         @foreach($usuarios as $key => $data)
                 <tr>
                     <td>{{ $data->name }}</td>
                     <td>{{ $data->email }}</td>
                     <td><a href="adminEliminarUsuarios/{{ $data -> id }}" class="miBoton">Eliminar</a></td>
+                    <td><a href="" class="botonEditar">Editar</a></td>
+                    <td></td>
                 </tr>
 
         @endforeach
