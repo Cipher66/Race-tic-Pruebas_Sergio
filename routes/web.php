@@ -55,3 +55,5 @@ Route::get('/adminEliminarUsuarios/{id}', function ($id){
 Route::get('/adminVerUsuarios', 'GestionarUsuariosController@eliminar');
 
 Route::get('/adminEliminarUsuarios/{id}', 'GestionarUsuariosController@redireccionar');
+
+Route::get('/adminActualizarUsuarios/{id}', 'GestionarUsuariosController@modificar');

@@ -27,7 +27,8 @@
                 <input type="text" value="{{ $data->name }}">
                 <strong>Email:</strong>
                 <input type="text" value="{{ $data->email }}">
-                <input type="submit" value="Actualizar perfil">
+                <!--<input type="submit" value="Actualizar perfil">-->
+                <a href="adminModificarUsuarios/{{ $data -> id }}">Actualizar Perfil</a>
             </form>
         </div>
         @endforeach
