@@ -21,7 +21,6 @@ Route::get('/inicio', function () {
 Route::get('/contacto', function () {
     return view('contacto');
 });
-
 Route::get('/coches', function () {
     return view('coches');
 });
@@ -38,6 +37,9 @@ Route::get('/admin', 'AdminController@index');
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
+Route::get('/EditarUsuario', function (){
+    return view('EditarUsuarios');
+});
 
 /*<-- Rutas para visualizar y eliminar usuarios en la vista de admin*/
 /*Route::get('/adminVerUsuarios', function (){
@@ -56,4 +58,4 @@ Route::get('/adminVerUsuarios', 'GestionarUsuariosController@eliminar');
 
 Route::get('/adminEliminarUsuarios/{id}', 'GestionarUsuariosController@redireccionar');
 
-Route::get('/adminModificarUsuarios/{id}', 'GestionarUsuariosController@actualizar');
+Route::post('/adminEditarUsuario', 'GestionarUsuariosController@modificar');
