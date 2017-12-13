@@ -18,17 +18,17 @@
             <td>{{ $data->name }}</td>
             <td>{{ $data->email }}</td>
             <td><a href="adminEliminarUsuarios/{{ $data -> id }}" class="miBoton">Eliminar</a></td>
-            <td><a href="" class="botonEditar">Editar</a></td>
+            <td><a href="/adminEditarUsuario/{{ $data -> id }}" class="botonEditar">Editar</a></td>
             <td></td>
         </tr>
         <div class="">
-            <form method="post" action="adminEditarUsuario">
+            <form method="post" action="{{ url('adminActualizarUsuario/')}}">
                 <input type="hidden" name="id" value="{{ $data->id }}"/>
                 <strong>Nombre:</strong><br>
                 <input type="text" name="name" value="{{ $data->name }}"/>
                 <strong>Email:</strong>
                 <input type="text" name="email" value="{{ $data->email }}"/>
-                <input type="submit" value="Actualizar perfil">
+                <input type="submit" value="Actualizar perfil"/>
             </form>
         </div>
         @endforeach
@@ -36,3 +36,8 @@
     </center>
 </div>
 @endsection
+
+
+<!--
+action="adminActualizarUsuario"
+-->
