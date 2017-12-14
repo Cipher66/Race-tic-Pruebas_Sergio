@@ -24,7 +24,7 @@
             <td>{{ $data->name }}</td>
             <td>{{ $data->email }}</td>
             <td><a href="adminEliminarUsuarios/{{ $data -> id }}" class="miBoton">Eliminar</a></td>
-            <td><a href="/adminEditarUsuario/{{ $data -> id }}" class="botonEditar">Editar</a></td>
+            <td><base href="/adminEditarUsuario/{{ $data -> id }}" class="botonEditar" />Editar</td>
             <td></td>
         </tr>
         @endforeach
