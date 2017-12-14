@@ -2,9 +2,15 @@
 
 @section('content')
 
-    <center><h2><u>Panel de administración de usuarios</u></h2></center>
+    <p><h2><u>Panel de administración de usuarios</u></h2></p>
+
+        <form id="formulario">
+            <h1>hola</h1>
+            <input type="text"/>
+        </form>
+
 <div id="tabla">
-    <center>
+
     <table border="1px solid black">
         <tr>
             <th>Nombre</th>
@@ -21,19 +27,9 @@
             <td><a href="/adminEditarUsuario/{{ $data -> id }}" class="botonEditar">Editar</a></td>
             <td></td>
         </tr>
-        <div class="">
-            <form method="post" action="{{ url('adminActualizarUsuario/')}}">
-                <input type="hidden" name="id" value="{{ $data->id }}"/>
-                <strong>Nombre:</strong><br>
-                <input type="text" name="name" value="{{ $data->name }}"/>
-                <strong>Email:</strong>
-                <input type="text" name="email" value="{{ $data->email }}"/>
-                <input type="submit" value="Actualizar perfil"/>
-            </form>
-        </div>
         @endforeach
     </table>
-    </center>
+
 </div>
 @endsection
 

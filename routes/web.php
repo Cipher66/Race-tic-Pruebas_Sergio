@@ -37,9 +37,44 @@ Route::get('/admin', 'AdminController@index');
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
-Route::get('/EditarUsuario', function (){
-    return view('EditarUsuarios');
+Route::get('/adminVerUsuarios','GestionarUsuariosController@ver');
+
+Route::post('/adminActualizarUsuario','GestionarUsuariosController@actualizar');
+
+/*<-- Rutas mediante controlador -->*/
+Route::get('/adminEliminarUsuarios', 'GestionarUsuariosController@eliminar');
+
+Route::get('/adminEliminarUsuario/{id}', 'GestionarUsuariosController@redireccionar');
+
+Route::get('/adminActualizarUsuario', function (){
+    return view('updateUser');
 });
+
+Route::get('/adminEditarUsuario/{id}', function (){
+    $usuarios = DB::table('users')->get();
+    return view('editarUsuarios', ['usuarios' => $usuarios]);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Route::get('/adminEditarUsuario/{id}', function () {
+    $usuarios = DB::table('users')->get();
+    return view('editarUsuarios', ['usuarios' => $usuarios]);
+});*/
+
+//Route::post('/adminEditarUsuario', 'GestionarUsuariosController@modificar');
 
 /*<-- Rutas para visualizar y eliminar usuarios en la vista de admin*/
 /*Route::get('/adminVerUsuarios', function (){
@@ -52,10 +87,3 @@ Route::get('/adminEliminarUsuarios/{id}', function ($id){
     $borrar = DB::table('users')->where('id', '=', $id)->delete();
     return redirect('/adminVerUsuarios');
 });*/
-
-/*<-- Rutas mediante controlador -->*/
-Route::get('/adminVerUsuarios', 'GestionarUsuariosController@eliminar');
-
-Route::get('/adminEliminarUsuarios/{id}', 'GestionarUsuariosController@redireccionar');
-
-Route::post('/adminEditarUsuario', 'GestionarUsuariosController@modificar');
