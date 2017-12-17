@@ -19,8 +19,8 @@ li {
     color: #f05f40;
 }
 #navbar{
-    /*background-color: #222222;*/
-    background-color: #0C1A1E;
+    background-color: #222222;
+    /*background-color: #0C1A1E;*/
 }
 
 .colorlogres{
@@ -186,20 +186,20 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
     float:left;
 }
 .linked-in{
-    //background-color:#007bb6;
-    background-color: black;
+    background-color:#007bb6;
+    /*background-color: black;*/
 }
 .facebook{
-    //background-color:#3b5998;
-    background-color: black;
+    background-color:#3b5998;
+    /*background-color: black;*/
 }
 .twitter{
-    //background-color:#1da1f2;
-    background-color: black;
+    background-color:#1da1f2;
+    /*background-color: black;*/
 }
 .google{
-    //background-color:#f63e28;
-    background-color: black;
+    background-color:#f63e28;
+    /*background-color: black;*/
 }
 
 /***********<-- CSS Sergio -->***********/
