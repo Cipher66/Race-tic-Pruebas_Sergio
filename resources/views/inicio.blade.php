@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="fuente">
         <div class="row fondodiv">
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box mt-5 mx-auto">
@@ -43,7 +43,7 @@
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box mt-5 mx-auto">
                     <img src="images/icons/security.png"> </img>
-                    <h3 >Fiable</h3>
+                    <h3>Fiable</h3>
                     <p class="text-muted mb-0">Servicio 100% fiable</p>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                 <h3 class="text-center">Quiénes somos</h3>
                 <p class="">Somos una pequeña empresa del ámbito automovilistico, que analizamos a tiempo real(a través de 4G) los datos de un coche.Mediante un <a href="https://es.wikipedia.org/wiki/OBD">OBD-II </a> almacenamos los datos en la <a href="https://es.wikipedia.org/wiki/Computaci%C3%B3n_en_la_nube" >nube</a>, y luego los plasmamos en ésta aplicación web. Es un servicio rápido, fiable y sobre todo sencillo de usar. Ofrecemos la opción de añadir más de un vehiculo a la aplicación. </p>
                 <hr class="my-4">
-                <img src="images/Race-tic_Intento1.png" width="500px" height="400px" id="imagen">
+                <img src="images/Race-tic_Intento1.png" width="50%" height="50%"  id="imagen">
                 <!--<p class="text-center">Si lo prefieres, puedes seguir este <strong>videotutorial</strong> dónde se explica perfectamente cómo usarlo</p>-->
 
                 <!--<iframe class="video parallax" width="420" height="315"
@@ -87,3 +87,7 @@
 </section>
 
 @endsection
+
+<!--
+width="500px" height="400px"
+-->

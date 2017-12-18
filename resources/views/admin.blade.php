@@ -22,7 +22,8 @@
             <td><button type="button"
                     class="botonEditar"
                     data-toggle="modal"
-                    data-target="#myModal">Editar</button></td>
+                    data-target="#myModal"
+                    value="{{ $data -> id }}">Editar</button></td>
             <td></td>
         </tr>
         <!-- Modal -->
@@ -38,7 +39,8 @@
                     </div>
                     <div class="modal-body">
                         <p>Some text in the modal</p>
-
+                        <p>{{ $data-> name }}</p>
+                        <p>{{ $data-> email }}</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button"

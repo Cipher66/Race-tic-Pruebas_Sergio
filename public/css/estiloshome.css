@@ -56,9 +56,9 @@ header.masthead {
 
 .colordesc{
 
-    background-color: #0C1A1E;
+    /*background-color: #0C1A1E;*/
     color: #9D9D9D;
-    /*background-color: #222222;*/
+    background-color: #222222;
     /*color: #333333;*/
     /*color:#f05f40;*/
     /*color: #54697E;*/
@@ -268,4 +268,7 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
     color: black;
 }
 
+h3{
+    font-family: 'Montserrat', sans-serif;
+}
 /***********<-- /CSS Sergio -->***********/
