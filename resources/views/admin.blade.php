@@ -22,12 +22,11 @@
             <td><button type="button"
                     class="botonEditar"
                     data-toggle="modal"
-                    data-target="#myModal"
-                    value="{{ $data -> id }}">Editar</button></td>
+                    data-target="#myModal-{{ $data->id }}">Editar</button></td>
             <td></td>
         </tr>
         <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal fade" id="myModal-{{ $data->id }}" role="dialog">
             <div class="modal-dialog">
                 <!-- Contenido del modal -->
                 <div class="modal-content">
@@ -39,15 +38,15 @@
                     </div>
                     <div class="modal-body">
                         <p>Some text in the modal</p>
-                        <p>{{ $data-> name }}</p>
-                        <p>{{ $data-> email }}</p>
+                        Nombre: <input type="text" name="name" value="{{ $data-> name }}"/>
+                        Correo electrónico: <input type="text" name="email" value="{{ $data-> email }}"/>
                     </div>
                     <div class="modal-footer">
                         <button type="button"
                                 class="botonCerrar"
                                 data-dismiss="modal">Cerrar</button>
-                        <button type="button"
-                                class="botonActualizar">Actualizar</button>
+                        <a href="/adminActualizarUsuario/{{ $data->id }}"
+                           class="botonActualizar">Actualizar</a>
                     </div>
                 </div>
                 <!-- /Contenido del modal -->
@@ -60,29 +59,3 @@
 
 </div>
 @endsection
-
-
-<!--
-action="adminActualizarUsuario"
-<table>
-<tr>
-<input type="hidden"value="{{ $data->id }}" />
-</tr>
-<tr>
-<td>
-Nombre:
-</td>
-<td>
-<input type="text" value="{{ $data->name }}" />
-</td>
-</tr>
-<tr>
-<td>
-Email:
-</td>
-<td>
-<input type="text" value="{{ $data->email }}" />
-</td>
-</tr>
-</table>
--->

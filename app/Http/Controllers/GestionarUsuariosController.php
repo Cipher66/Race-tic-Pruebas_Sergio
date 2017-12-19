@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-//use UserFormRequest;
+use App\UserFormRequest;
+use Illuminate\Support\Facades\Redirect;
+use App\User;
 
 class GestionarUsuariosController extends Controller
 {
@@ -28,7 +30,16 @@ class GestionarUsuariosController extends Controller
         DB::table('users')->where('id', '=', $id)->update(["name"=>$name, "email"=>$email]);
         return redirect('/adminVerUsuarios');
     }
-    public function editar($id){
+
+    public function actualizar($id, UserFormRequest $request){
+        $user = User::findOrFail($id);
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $user->save();
+        return \Redirect::route('users.edit', [$user->id])->with('message', 'User has been updated!');
+    }
+
+    /*public function editar($id){
         try {
             $user = DB::table('users')->where("id", "=", $id)->get();
             return redirect("/adminVerUsuarios")->with('user', $user);
@@ -36,8 +47,8 @@ class GestionarUsuariosController extends Controller
         catch (ModelNotFoundException $err) {
 
         }
-    }
-    public function actualizar(Request $request){
+    }*/
+    /*public function actualizar(Request $request){
         //print_r($request);
         return "hola";
         /*try{
@@ -54,22 +65,11 @@ class GestionarUsuariosController extends Controller
         }catch (ModelNotFoundException $err){
 
         }*/
-    }
+    /*}*/
 
 }
 
 
-
-
-/*
-    public function actualizar($id, UserFormRequest $request){
-        $user = User::findOrFail($id);
-        $user->name = $request->get('name');
-        $user->email = $request->get('email');
-        $user->save();
-        return \Redirect::route('users.edit', [$user->id])->with('message', 'User has been updated!');
-    }
-*/
 /*
 
 }
