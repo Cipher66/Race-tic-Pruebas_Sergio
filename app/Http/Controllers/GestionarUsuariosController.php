@@ -11,9 +11,12 @@ use App\User;
 class GestionarUsuariosController extends Controller
 {
     //
-    public function ver(){
+    public function ver($request, $user){
         $usuarios = DB::table('users')->get();
-        return view('admin', ['usuarios' => $usuarios]);
+        if($user -> role === 'admin'){
+            return redirect()->intended('/admin', ['usuarios' => $usuarios]);
+        }
+        return redirect()->intended('/inicio');
     }
 
     public function redireccionar($id){
@@ -38,6 +41,69 @@ class GestionarUsuariosController extends Controller
         $user->save();
         return \Redirect::route('users.edit', [$user->id])->with('message', 'User has been updated!');
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     return view('admin', ['usuarios' => $usuarios]);
+     */
 
     /*public function editar($id){
         try {
@@ -67,7 +133,7 @@ class GestionarUsuariosController extends Controller
         }*/
     /*}*/
 
-}
+
 
 
 /*
