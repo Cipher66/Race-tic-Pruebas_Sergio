@@ -16,12 +16,10 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next){
 
-        if(Auth::check()){
-            return $next($request);
-        }else{
-            return view('inicio')->withErrors('No eres administrador');
+        if($request -> user() -> type != 'admin'){
+            return redirect('login');
         }
-
+        return $next($request);
     }
 
 }

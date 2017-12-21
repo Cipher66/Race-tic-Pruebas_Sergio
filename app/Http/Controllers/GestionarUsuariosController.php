@@ -10,13 +10,14 @@ use App\User;
 
 class GestionarUsuariosController extends Controller
 {
+
     //
     public function ver($request, $user){
         $usuarios = DB::table('users')->get();
         if($user -> role === 'admin'){
-            return redirect()->intended('/admin', ['usuarios' => $usuarios]);
+            return redirect()->intended('/adminVerUsuarios', ['usuarios' => $usuarios]);
         }
-        return redirect()->intended('/inicio');
+        return redirect()->intended('/login');
     }
 
     public function redireccionar($id){
