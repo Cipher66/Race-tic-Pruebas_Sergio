@@ -17,7 +17,8 @@ class GestionarUsuariosController extends Controller
         if($user -> role === 'admin'){
             return redirect()->intended('/adminVerUsuarios', ['usuarios' => $usuarios]);
         }
-        return redirect()->intended('/login');
+        /*return redirect()->intended('/login');*/
+        return redirect('/login');
     }
 
     public function redireccionar($id){
