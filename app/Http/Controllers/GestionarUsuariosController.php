@@ -12,13 +12,18 @@ class GestionarUsuariosController extends Controller
 {
 
     //
-    public function ver($request, $user){
+    /*public function ver($request, $user){
         $usuarios = DB::table('users')->get();
         if($user -> role === 'admin'){
             return redirect()->intended('/adminVerUsuarios', ['usuarios' => $usuarios]);
         }
         /*return redirect()->intended('/login');*/
-        return redirect('/login');
+        /*return redirect('/login');
+    }*/
+
+    public function ver(){
+        $usuarios = DB::table('users')->get();
+        return view('admin', ['usuarios' => $usuarios]);
     }
 
     public function redireccionar($id){

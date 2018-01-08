@@ -16,10 +16,15 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next){
 
-        if($request -> user() -> type != 'admin'){
-            return redirect('login');
+        if(! $this -> auth -> user){
+            redirect('login');
         }
         return $next($request);
     }
 
 }
+
+/*if($request -> user() -> type != 'admin'){
+      return redirect('login');
+  }
+  return $next($request);*/

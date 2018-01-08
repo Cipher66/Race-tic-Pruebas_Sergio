@@ -39,9 +39,15 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 //Route::get('/adminVerUsuarios','GestionarUsuariosController@ver');
 
-Route::get('/adminVerUsuarios', ['middleware' => 'admin', function() {
+/*Route::get('/adminVerUsuarios', ['middleware' => 'admin', function() {
     return view('admin');
-}]);
+}]);*/
+
+Route::group( ['middleware' => 'admin'],function (){
+
+    Route::get('adminVerUsuarios','GestionarUsuariosController@ver');
+
+});
 
 Route::post('/adminActualizarUsuario','GestionarUsuariosController@actualizar');
 
