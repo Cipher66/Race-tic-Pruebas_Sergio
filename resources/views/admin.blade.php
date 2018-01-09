@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+
+
 @section('content')
 
     <p><h2><u>Panel de administración de usuarios</u></h2></p>
