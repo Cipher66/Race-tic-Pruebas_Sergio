@@ -4,11 +4,13 @@
 
 @section('content')
 
-    <p><h2><u>Panel de administración de usuarios</u></h2></p>
+    <div style="text-align:center;">
+        <p><h2><u>Panel de administración de usuarios</u></h2></p>
+    </div>
 
 <div id="tabla">
 
-    <table border="1px solid black">
+    <table border="1px solid black" align="center">
         <tr>
             <th>Nombre</th>
             <th>Correo electrónico</th>
@@ -25,7 +27,14 @@
                     class="botonEditar"
                     data-toggle="modal"
                     data-target="#myModal-{{ $data->id }}">Editar</button></td>
-            <td></td>
+            <td id="confirmacion">
+                @if($data -> verified == 0)
+                    <img src="../images/x_no.png" />
+                @else
+                    <img src="../images/tick_si.png" />
+                @endif
+
+            </td>
         </tr>
         <!-- Modal -->
         <div class="modal fade" id="myModal-{{ $data->id }}" role="dialog">

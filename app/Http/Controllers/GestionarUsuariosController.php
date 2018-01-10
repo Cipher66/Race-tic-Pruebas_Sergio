@@ -30,7 +30,7 @@ class GestionarUsuariosController extends Controller
         DB::table('users')->where('id', '=', $id)->delete();
         return redirect('/adminVerUsuarios');
     }
-    public function modificar($request){
+    public function modificar($id, UserFormRequest $request){
 
         $id = $request->get('id');
         $name = $request->get('name');

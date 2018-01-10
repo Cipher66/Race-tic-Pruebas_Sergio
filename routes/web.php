@@ -43,11 +43,11 @@ Route::get('/adminVerUsuarios','GestionarUsuariosController@ver');
     return view('admin');
 }]);*/
 
-/*Route::group( ['middleware' => 'admin'],function (){
+Route::group( ['middleware' => 'admin'],function (){
 
     Route::get('adminVerUsuarios','GestionarUsuariosController@ver');
 
-});*/
+});
 
 //Route::post('/adminActualizarUsuario','GestionarUsuariosController@actualizar');
 

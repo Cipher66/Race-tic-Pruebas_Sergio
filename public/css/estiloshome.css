@@ -272,4 +272,11 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
 h3{
     font-family: 'Montserrat', sans-serif;
 }
+
+#confirmacion{
+    text-align: center;
+}
+#tabla{
+    align-content: center;
+}
 /***********<-- /CSS Sergio -->***********/
