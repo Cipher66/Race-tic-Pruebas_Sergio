@@ -26,7 +26,7 @@ class GestionarUsuariosController extends Controller
         return view('admin', ['usuarios' => $usuarios]);
     }
 
-    public function redireccionar($id){
+    public function eliminar($id){
         DB::table('users')->where('id', '=', $id)->delete();
         return redirect('/adminVerUsuarios');
     }
@@ -41,19 +41,19 @@ class GestionarUsuariosController extends Controller
         return redirect('/adminVerUsuarios');
     }
 
-    public function actualizar($id, UserFormRequest $request){
+/*    public function actualizar($id, UserFormRequest $request){
         $user = User::findOrFail($id);
         $user->name = $request->get('name');
         $user->email = $request->get('email');
         $user->save();
         return \Redirect::route('users.edit', [$user->id])->with('message', 'User has been updated!');
-    }
+    }*/
 }
 
 
 /*
  *
- *
+ *redireccionar
  * */
 
 

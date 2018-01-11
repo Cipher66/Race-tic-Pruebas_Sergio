@@ -28,8 +28,6 @@ Route::get('/comofunciona', function () {
     return view('comofunciona');
 });
 
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -39,28 +37,18 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 Route::get('/adminVerUsuarios','GestionarUsuariosController@ver');
 
-/*Route::get('/adminVerUsuarios', ['middleware' => 'admin', function() {
-    return view('admin');
-}]);*/
-
-Route::group( ['middleware' => 'admin'],function (){
+/*Route::group( ['middleware' => 'admin'],function (){
 
     Route::get('adminVerUsuarios','GestionarUsuariosController@ver');
 
-});
-
-//Route::post('/adminActualizarUsuario','GestionarUsuariosController@actualizar');
+});*/
 
 Route::post('/adminActualizarUsuario/{id}','GestionarUsuariosController@modificar');
 
 /*<-- Rutas mediante controlador -->*/
 Route::get('/adminEliminarUsuarios', 'GestionarUsuariosController@eliminar');
 
-Route::get('/adminEliminarUsuario/{id}', 'GestionarUsuariosController@redireccionar');
-
-/*Route::get('/adminActualizarUsuario', function (){
-    return view('updateUser');
-});*/
+Route::get('/adminEliminarUsuario/{id}', 'GestionarUsuariosController@eliminar');
 
 Route::get('/adminEditarUsuario/{id}', function (){
     $usuarios = DB::table('users')->get();
@@ -74,12 +62,15 @@ Route::get('/adminEditarUsuario/{id}', function (){
 
 
 
+/*Route::get('/adminActualizarUsuario', function (){
+    return view('updateUser');
+});*/
 
+//Route::post('/adminActualizarUsuario','GestionarUsuariosController@actualizar');
 
-
-
-
-
+/*Route::get('/adminVerUsuarios', ['middleware' => 'admin', function() {
+    return view('admin');
+}]);*/
 
 /*Route::get('/adminEditarUsuario/{id}', function () {
     $usuarios = DB::table('users')->get();
