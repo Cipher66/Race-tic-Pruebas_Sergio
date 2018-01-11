@@ -30,7 +30,7 @@ class GestionarUsuariosController extends Controller
         DB::table('users')->where('id', '=', $id)->delete();
         return redirect('/adminVerUsuarios');
     }
-    public function modificar($id, UserFormRequest $request){
+    /*public function modificar($id, UserFormRequest $request){
 
         $id = $request->get('id');
         $name = $request->get('name');
@@ -39,6 +39,18 @@ class GestionarUsuariosController extends Controller
 
         DB::table('users')->where('id', '=', $id)->update(["name"=>$name, "email"=>$email]);
         return redirect('/adminVerUsuarios');
+    }*/
+    public function editar($id){
+        $user = User::findOrFail($id);
+        return view($this->path.'.edit',compact('user'));
+    }
+
+    public function update(Request $request, $id){
+        $user = User::findOrFail($id);
+        $user -> name = $request -> name;
+        $user -> email = $request -> email;
+        $user ->save();
+        return \redirect('adminVerUsuarios');
     }
 
 /*    public function actualizar($id, UserFormRequest $request){
