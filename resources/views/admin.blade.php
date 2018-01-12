@@ -22,7 +22,7 @@
         <tr>
             <td>{{ $data->name }}</td>
             <td>{{ $data->email }}</td>
-            <td><a href="adminEliminarUsuarios/{{ $data -> id }}" class="miBoton">Eliminar</a></td>
+            <td><a href="adminEliminarUsuario/{{ $data -> id }}" class="miBoton">Eliminar</a></td>
             <td><button type="button"
                     class="botonEditar"
                     data-toggle="modal"
@@ -40,6 +40,8 @@
         <div class="modal fade" id="myModal-{{ $data->id }}" role="dialog">
             <div class="modal-dialog">
                 <!-- Contenido del modal -->
+                <form method="post"  action="/adminActualizarUsuario">
+                value="{{ csrf_field() }}"
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button"
@@ -56,10 +58,11 @@
                         <button type="button"
                                 class="botonCerrar"
                                 data-dismiss="modal">Cerrar</button>
-                        <a href="/adminActualizarUsuario/{{ $data->id }}"
-                           class="botonActualizar">Actualizar</a>
+                        <input type="submit" value="Actualizar">
                     </div>
+
                 </div>
+                </form>
                 <!-- /Contenido del modal -->
             </div>
         </div>

@@ -45,17 +45,28 @@ Route::get('/adminVerUsuarios','GestionarUsuariosController@ver');
 
 //Route::post('/adminActualizarUsuario/{id}','GestionarUsuariosController@modificar');
 
-Route::post('/adminActualizarUsuario/{id}','GestionarUsuariosController@update');
+Route::post ('/adminActualizarUsuario','GestionarUsuariosController@update');
 
 /*<-- Rutas mediante controlador -->*/
 //Route::get('/adminEliminarUsuarios', 'GestionarUsuariosController@eliminar');
 
 Route::get('/adminEliminarUsuario/{id}', 'GestionarUsuariosController@eliminar');
 
-Route::get('/adminEditarUsuario/{id}', function (){
+
+
+
+
+
+
+
+
+
+
+/*Route::get('/adminEditarUsuario/{id}', function (){
     $usuarios = DB::table('users')->get();
     return view('editarUsuarios', ['usuarios' => $usuarios]);
-});
+});*/
+/*});*/
 
 
 

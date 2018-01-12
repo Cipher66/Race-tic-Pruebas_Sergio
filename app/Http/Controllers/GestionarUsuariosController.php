@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\UserFormRequest;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use App\User;
 
@@ -30,7 +31,42 @@ class GestionarUsuariosController extends Controller
         DB::table('users')->where('id', '=', $id)->delete();
         return redirect('/adminVerUsuarios');
     }
-    /*public function modificar($id, UserFormRequest $request){
+
+    public function editar($id){
+        $user = User::findOrFail($id);
+        return view($this->path.'.edit',compact('user'));
+    }
+
+    public function update(Request $request, $id){
+        /*echo "hola";
+
+      print_r($data = Input::all());*/
+        $user = User::find($id);
+
+        $data = Input::all();
+
+        if ($user -> isValid($data)){
+
+            $user -> fill($data);
+            $user -> save();
+
+
+        }
+        return Redirect::route('/adminVerUsuarios', array($user->id));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /*public function update($id){
 
         $id = $request->get('id');
         $name = $request->get('name');
@@ -39,21 +75,22 @@ class GestionarUsuariosController extends Controller
 
         DB::table('users')->where('id', '=', $id)->update(["name"=>$name, "email"=>$email]);
         return redirect('/adminVerUsuarios');
-    }*/
-    public function editar($id){
-        $user = User::findOrFail($id);
-        return view($this->path.'.edit',compact('user'));
-    }
 
-    public function update(Request $request, $id){
-        $user = User::findOrFail($id);
+    }*/
+
+
+    /*public function update($id){
+        $user = User::find($id, $request);
         $user -> name = $request -> name;
         $user -> email = $request -> email;
         $user ->save();
         return \redirect('adminVerUsuarios');
-    }
+    }*/
 
-/*    public function actualizar($id, UserFormRequest $request){
+
+
+
+    /*public function update($id, UserFormRequest $request){
         $user = User::findOrFail($id);
         $user->name = $request->get('name');
         $user->email = $request->get('email');
