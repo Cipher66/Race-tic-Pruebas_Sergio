@@ -37,9 +37,10 @@ class GestionarUsuariosController extends Controller
         return view($this->path.'.edit',compact('user'));
     }
 
-    public function update(Request $request, $id){
-        /*echo "hola";
 
+
+    public function update($id){
+      /*echo "hola";
       print_r($data = Input::all());*/
         $user = User::find($id);
 
@@ -49,7 +50,6 @@ class GestionarUsuariosController extends Controller
 
             $user -> fill($data);
             $user -> save();
-
 
         }
         return Redirect::route('/adminVerUsuarios', array($user->id));
