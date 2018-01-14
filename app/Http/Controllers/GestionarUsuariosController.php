@@ -19,90 +19,41 @@ class GestionarUsuariosController extends Controller
             return redirect()->intended('/adminVerUsuarios', ['usuarios' => $usuarios]);
         }
         /*return redirect()->intended('/login');*/
-        /*return redirect('/login');
-    }*/
+    /*return redirect('/login');
+}*/
 
-    public function ver(){
+    public function ver()
+    {
         $usuarios = DB::table('users')->get();
         return view('admin', ['usuarios' => $usuarios]);
     }
 
-    public function eliminar($id){
+    public function eliminar($id)
+    {
         DB::table('users')->where('id', '=', $id)->delete();
         return redirect('/adminVerUsuarios');
     }
 
-    public function editar($id){
-        $user = User::findOrFail($id);
-        return view($this->path.'.edit',compact('user'));
+    public function editar($id)
+    {
+        $data = User::find($id);
+        return view('editarUsuarios', compact('data'));
     }
 
+    public function update(Request $request, $id)
+    {
+        $data = User::find($id);
+        $data->name = $request->input('name');
+        $data->email = $request->input('email');
+        $data->update();
 
-
-    public function update($id){
-      /*echo "hola";
-      print_r($data = Input::all());*/
-        $user = User::find($id);
-
-        $data = Input::all();
-
-        if ($user -> isValid($data)){
-
-            $user -> fill($data);
-            $user -> save();
-
-        }
-        return Redirect::route('/adminVerUsuarios', array($user->id));
+        return \redirect('/adminVerUsuarios');
     }
 
-
-
-
-
-
-
-
-
-
-
-
-    /*public function update($id){
-
-        $id = $request->get('id');
-        $name = $request->get('name');
-        $email = $request->get('email');
-
-
-        DB::table('users')->where('id', '=', $id)->update(["name"=>$name, "email"=>$email]);
-        return redirect('/adminVerUsuarios');
-
-    }*/
-
-
-    /*public function update($id){
-        $user = User::find($id, $request);
-        $user -> name = $request -> name;
-        $user -> email = $request -> email;
-        $user ->save();
-        return \redirect('adminVerUsuarios');
-    }*/
-
-
-
-
-    /*public function update($id, UserFormRequest $request){
-        $user = User::findOrFail($id);
-        $user->name = $request->get('name');
-        $user->email = $request->get('email');
-        $user->save();
-        return \Redirect::route('users.edit', [$user->id])->with('message', 'User has been updated!');
-    }*/
 }
 
-
 /*
- *
- *redireccionar
+ * https://www.youtube.com/watch?v=cQ3FyGoCvEU
  * */
 
 

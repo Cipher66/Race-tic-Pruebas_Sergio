@@ -31,11 +31,21 @@ Route::get('/comofunciona', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/admin', 'AdminController@index');
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 Route::get('/adminVerUsuarios','GestionarUsuariosController@ver');
+
+Route::get('/adminEliminarUsuario/{id}', 'GestionarUsuariosController@eliminar');
+
+Route::get('/adminEditarUsuario/{id}', 'GestionarUsuariosController@editar');
+
+Route::put ('/adminActualizarUsuario/{id}','GestionarUsuariosController@update');
+
+
+
 
 /*Route::group( ['middleware' => 'admin'],function (){
 
@@ -45,12 +55,16 @@ Route::get('/adminVerUsuarios','GestionarUsuariosController@ver');
 
 //Route::post('/adminActualizarUsuario/{id}','GestionarUsuariosController@modificar');
 
-Route::post ('/adminActualizarUsuario','GestionarUsuariosController@update');
+/*Route::post ('/adminActualizarUsuario','GestionarUsuariosController@update');*/
+
+//Route::post('/adminActualizarUsuario/{id}', 'GestionarUsuariosController@update');
+
+
 
 /*<-- Rutas mediante controlador -->*/
 //Route::get('/adminEliminarUsuarios', 'GestionarUsuariosController@eliminar');
 
-Route::get('/adminEliminarUsuario/{id}', 'GestionarUsuariosController@eliminar');
+
 
 
 
