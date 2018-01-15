@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-
+    <link href="{{ asset('../css/estiloshome.css') }}" rel="stylesheet" type="text/css" >
 
 @section('content')
 

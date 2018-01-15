@@ -1,8 +1,6 @@
 @extends('layouts.app')
-
+<link href="{{ asset('../css/estiloshome.css') }}" rel="stylesheet" type="text/css" >
 @section('content')
-
-
     <table>
         <form method="post" action="{{ url('/adminActualizarUsuario/'.$data->id) }}">
             {{ method_field('PUT') }}
@@ -18,7 +16,3 @@
         </form>
     </table>
 @endsection
-<!-- ($usuarios as $key => $data)-->
-<!--
-
--->
