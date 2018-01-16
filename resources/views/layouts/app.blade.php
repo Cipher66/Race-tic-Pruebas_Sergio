@@ -109,6 +109,7 @@
                         <li><a href="contacto" id="menus">Contacto</a></li>
                         <li><a href="comofunciona" id="menus">Cómo funciona</a></li>
                 @endguest
+                    <li><a href="adminVerUsuarios">Administración de usuarios</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
 

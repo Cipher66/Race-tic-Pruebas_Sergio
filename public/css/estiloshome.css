@@ -225,26 +225,7 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
     display: inline-block;
     font-size: 16px;
 }
-.miBoton{
-    background-color: #F44336; /* Rojo */
-    border: none;
-    color: white;
-    padding: 10px 27px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-.botonEditar{
-    background-color: blue;
-    border: none;
-    color: whitesmoke;
-    padding: 10px 27px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
+
 .botonActualizar{
     background-color: green;
     border: none;
@@ -276,7 +257,52 @@ h3{
 #confirmacion{
     text-align: center;
 }
+
+
+/* <-- Tabla de usuarios --> */
+
 #tabla{
     align-content: center;
+    border-radius: 10px;
+    /*border: 1px solid black;*/
+    overflow: hidden;
 }
+
+.botonEliminar{
+    background-color: #F44336; /* Rojo */
+    border: none;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.botonEditar{
+    background-color: blue;
+    border: none;
+    color: whitesmoke;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.cabecera{
+    background-color: #2A2A2A;
+    color: #FFFFFF;
+}
+.contenidoTabla{
+    display: table-cell;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    background-color: #9BA2AB;
+}
+
+
+/* <-- /Tabla de usuarios -->*/
+
+
 /***********<-- /CSS Sergio -->***********/
