@@ -263,45 +263,56 @@ h3{
 
 #tabla{
     align-content: center;
-    border-radius: 10px;
+    /*border-radius: 10px;
     /*border: 1px solid black;*/
     overflow: hidden;
+    text-align: center;
+
 }
 
-.botonEliminar{
-    /*
-    background-color: #F44336; /* Rojo */
-    /*border: none;
-    color: white;
-    padding: 10px 27px;
-    text-align: center;
+.boton{
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;*/
-    background-color: #DA4F49;
-    color: #FAFAFA;
-}
-.botonEditar{
-    background-color: blue;
+    display: block;
+    text-align: center;
+    cursor: pointer;
     border: none;
-    color: whitesmoke;
-    padding: 10px 27px;
-    text-align: center;
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 37px;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+}
+.boton.eliminar{
+    /*background-color: #DA4F49;
+    color: #FAFAFA;*/
+    background-color: red;
+    color: whitesmoke;
+}
+.boton.editar{
+    background-color: blue;
+    color: whitesmoke;
 }
 
 
 .cabecera{
     background-color: #2A2A2A;
     color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 .contenidoTabla{
     display: table-cell;
-    padding-top: 19px;
-    padding-bottom: 19px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
     background-color: #9BA2AB;
+}
+.contenidoCabecera{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
 }
 
 

@@ -11,20 +11,20 @@
 
 <div>
 
-    <table align="center" id="tabla">
+    <table align="center" class="table-responsive">
         <tr class="cabecera">
-            <th>Nombre</th>
-            <th>Correo electrónico</th>
-            <th>Eliminar</th>
-            <th>Editar</th>
-            <th>Confirmado</th>
+            <th class="contenidoCabecera">Nombre</th>
+            <th class="contenidoCabecera">Correo electrónico</th>
+            <th class="contenidoCabecera">Eliminar</th>
+            <th class="contenidoCabecera">Editar</th>
+            <th class="contenidoCabecera">Confirmado</th>
         </tr>
         @foreach($usuarios as $key => $data)
         <tr>
             <td class="contenidoTabla">{{ $data->name }}</td>
             <td class="contenidoTabla">{{ $data->email }}</td>
-            <td class="contenidoTabla"><a href="adminEliminarUsuario/{{ $data -> id }}" class="botonEliminar">Eliminar</a></td>
-            <td class="contenidoTabla"><a href="{{ url('/adminEditarUsuario/'.$data->id) }}" class="botonEditar">Editar</a></td>
+            <td class="contenidoTabla"><a href="adminEliminarUsuario/{{ $data -> id }}" class="boton eliminar">Eliminar</a></td>
+            <td class="contenidoTabla"><a href="{{ url('/adminEditarUsuario/'.$data->id) }}" class="boton editar">Editar</a></td>
             <td class="contenidoTabla" id="confirmacion">
                 @if($data -> verified == 0)
                     <img src="../images/x_no.png" />
