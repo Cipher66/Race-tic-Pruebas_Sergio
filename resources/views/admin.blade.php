@@ -1,17 +1,14 @@
 @extends('layouts.app')
 
-    <link href="{{ asset('../css/estiloshome.css') }}" rel="stylesheet" type="text/css" >
-<link href="{{ asset('../css/app.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('../css/estiloshome.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('../css/app.css') }}" rel="stylesheet" type="text/css">
 
 @section('content')
+    <h2 class="titulo">Panel de administración de usuarios</h2>
 
-    <div style="text-align:center;">
-        <p><h2><u>Panel de administración de usuarios</u></h2></p>
-    </div>
+<div id="gestorTabla">
 
-<div>
-
-    <table align="center" class="table-responsive">
+    <table align="center" id="tabla" class="table">
         <tr class="cabecera">
             <th class="contenidoCabecera">Nombre</th>
             <th class="contenidoCabecera">Correo electrónico</th>

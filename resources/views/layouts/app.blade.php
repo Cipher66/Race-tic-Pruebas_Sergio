@@ -157,7 +157,7 @@
 
             </div>
             <div class="col-md-3 col-sm-6 footer-col">
-                <img src="images/racetic.png" width="150" height="100">
+                <img src="../images/racetic.png" width="150" height="100">
             </div>
             <div class="col-md-3 col-sm-6 footer-col">
                 <h6 class="heading7">Premios</h6>

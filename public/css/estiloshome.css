@@ -260,16 +260,18 @@ h3{
 
 
 /* <-- Tabla de usuarios --> */
+.titulo{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
 
 #tabla{
     align-content: center;
-    /*border-radius: 10px;
-    /*border: 1px solid black;*/
+    border-radius: 10px;
     overflow: hidden;
     text-align: center;
 
 }
-
 .boton{
     text-decoration: none;
     display: block;
@@ -284,8 +286,6 @@ h3{
     text-decoration: none;
 }
 .boton.eliminar{
-    /*background-color: #DA4F49;
-    color: #FAFAFA;*/
     background-color: red;
     color: whitesmoke;
 }
@@ -296,27 +296,38 @@ h3{
 
 
 .cabecera{
-    background-color: #2A2A2A;
-    color: #FFFFFF;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    color: #9D9D9D;
+    background-color: #222222;
 
 }
 .contenidoTabla{
-    display: table-cell;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 50px;
-    background-color: #9BA2AB;
+    background-color: #0C1A1E;
+    color: whitesmoke;
 }
 .contenidoCabecera{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 50px;
+    text-align: center;
 }
+/* <-- /Tabla de usuarios --> */
 
-
-/* <-- /Tabla de usuarios -->*/
+/* <-- Editor de usuarios --> */
+.editor{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #0C1A1E;
+    align-content: center;
+}
+.cabeceraEditor{
+    color: whitesmoke;
+}
+#campos{
+    border: 1px solid;
+}
+.boton.actualizar{
+    background-color: #0d3625;
+    color: whitesmoke;
+}
+/* <-- /Editor de usuarios --> */
 
 
 /***********<-- /CSS Sergio -->***********/
