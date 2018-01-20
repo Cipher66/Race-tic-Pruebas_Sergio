@@ -31,6 +31,12 @@
     <!-- /Google Fonts (Montserrat)-->
     <link href="css/estiloshome.css" rel="stylesheet" />
 
+    <!-- Notify.js -->
+    <script>
+        $("act").notify("Usuario actualizado");
+    </script>
+    <!-- /Notify.js -->
+
 
 
 </head>

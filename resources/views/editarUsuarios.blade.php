@@ -17,7 +17,7 @@
                     <tr>
                         <td class="col-lg-4 col-sm-12"><input id="campos" type="text" name='name' value="{{ $data->name }}"/></td>
                         <td class="col-lg-4 col-sm-12"><input id="campos" type="text" name='email' value="{{ $data->email }}"/></td>
-                        <td class="col-lg-4 col-sm-12"><input class="boton actualizar" type="submit" value="Actualizar perfil" /></td>
+                        <td class="col-lg-4 col-sm-12"><input id="act" class="boton actualizar" type="submit" value="Actualizar perfil" /></td>
                     </tr>
                 </table>
             </div>
