@@ -1,6 +1,8 @@
 @extends('layouts.app')
+
     <link href="{{ asset('../css/estiloshome.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('../css/app.css') }}" rel="stylesheet" type="text/css" >
+
 @section('content')
     <table>
         <form method="post" action="{{ url('/adminActualizarUsuario/'.$data->id) }}">
@@ -15,8 +17,8 @@
                         <th class="col-lg-4 col-sm-12 cabeceraEditor">Actualizar</th>
                     </tr>
                     <tr>
-                        <td class="col-lg-4 col-sm-12"><input id="campos" type="text" name='name' value="{{ $data->name }}"/></td>
-                        <td class="col-lg-4 col-sm-12"><input id="campos" type="text" name='email' value="{{ $data->email }}"/></td>
+                        <td class="col-lg-4 col-sm-12"><input id="campos" required type="text" name='name' value="{{ $data->name }}"/></td>
+                        <td class="col-lg-4 col-sm-12"><input id="campos" required type="text" name='email' value="{{ $data->email }}"/></td>
                         <td class="col-lg-4 col-sm-12"><input id="act" class="boton actualizar" type="submit" value="Actualizar perfil" /></td>
                     </tr>
                 </table>
