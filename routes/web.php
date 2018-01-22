@@ -38,6 +38,12 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 Route::get('/adminVerUsuarios','GestionarUsuariosController@ver');
 
+/*Route::group(['middleware' => 'admin'], function(){
+    Route::get('/adminVerUsuarios','GestionarUsuariosController@ver');
+});*/
+
+//Route::get('/adminVerUsuarios', 'AdminController@index')->name('admin.home');
+
 Route::get('/adminEliminarUsuario/{id}', 'GestionarUsuariosController@eliminar');
 
 Route::get('/adminEditarUsuario/{id}', 'GestionarUsuariosController@editar');

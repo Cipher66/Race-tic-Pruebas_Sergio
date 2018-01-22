@@ -16,7 +16,8 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next){
 
-        if ( Auth::user() && Auth::user()->admin == 1){
+
+        if ( Auth::user()){
             return $next($request);
         }
         return redirect('inicio');
