@@ -111,11 +111,13 @@
                     <li><a href="contacto" id="menus">Contacto</a></li>
                     <li><a href="comofunciona" id="menus">Cómo funciona</a></li>
                 @else
-                        <li><a href="coches" id="menus">Coches</a></li>
-                        <li><a href="contacto" id="menus">Contacto</a></li>
-                        <li><a href="comofunciona" id="menus">Cómo funciona</a></li>
+                    <li><a href="coches" id="menus">Coches</a></li>
+                    <li><a href="contacto" id="menus">Contacto</a></li>
+                    <li><a href="comofunciona" id="menus">Cómo funciona</a></li>
                 @endguest
+                @if(Auth::guard('admin')->user())
                     <li><a href="adminVerUsuarios">Administración de usuarios</a></li>
+                @endif
             </ul>
             <ul class="nav navbar-nav navbar-right">
 
@@ -123,7 +125,7 @@
                     <li><a href="register" id="menus"><span class="glyphicon glyphicon-user colorboton"></span> Registrarse</a></li>
                     <li><a href="login" id="menus"><span class="glyphicon glyphicon-log-in colorboton"></span> Iniciar sesión</a></li>
                     @else
-                        <li class="dropdown">
+                        <li class="dropdown col-xs-12" >
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
